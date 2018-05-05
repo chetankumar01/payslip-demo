@@ -5,15 +5,12 @@ import { ComputeActions } from '../actions';
 import { history } from '../utils/history';
 
 class Home extends React.PureComponent {
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.computePayslipRequestStatus === 'success') {
+  componentDidUpdate() {
+    if (this.props.computePayslipRequestStatus === 'success') {
       history.push('/results');
     }
   }
-  computePayslip = values => {
-    console.log(values);
-    this.props.computePayslip(values);
-  };
+
   render() {
     return (
       <div className="uk-container uk-margin-top">
@@ -21,7 +18,7 @@ class Home extends React.PureComponent {
         <hr />
         <div className="uk-width-1-2@s">
           <PayslipForm
-            onSubmit={this.computePayslip}
+            onSubmit={this.props.computePayslip}
             requestStatus={this.props.computePayslipRequestStatus}
             submitError={this.props.computePayslipError}
           />
