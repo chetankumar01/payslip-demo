@@ -13,6 +13,8 @@ class Results extends React.PureComponent {
           <thead>
             <tr>
               <th>Name</th>
+              <th>Annual Salary</th>
+              <th>Super Rate</th>
               <th>Pay Period</th>
               <th>Gross Income</th>
               <th>Net Income</th>
@@ -27,6 +29,8 @@ class Results extends React.PureComponent {
                   <td>
                     {p.firstName} {p.lastName}
                   </td>
+                  <td>{p.annualSalary}</td>
+                  <td>{p.superRate} %</td>
                   <td>{p.payPeriod}</td>
                   <td>{p.grossIncome}</td>
                   <td>{p.netIncome}</td>

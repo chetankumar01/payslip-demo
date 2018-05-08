@@ -33,6 +33,8 @@ function* computePayslip(action) {
     ComputeActions.computePayslipSuccess({
       firstName,
       lastName,
+      annualSalary,
+      superRate,
       payPeriod,
       grossIncome,
       incomeTax,

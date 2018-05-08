@@ -11,3 +11,6 @@ export const computePayslipSuccess = createAction(COMPUTE_PAYSLIP_SUCCESS);
 
 export const COMPUTE_PAYSLIP_FAILURE = 'PAYSLIPS/COMPUTE_PAYSLIP_FAILURE';
 export const computePayslipFailure = createAction(COMPUTE_PAYSLIP_FAILURE);
+
+export const COMPUTE_PAYSLIP_RESET = 'PAYSLIPS/COMPUTE_PAYSLIP_RESET';
+export const computePayslipReset = createAction(COMPUTE_PAYSLIP_RESET);

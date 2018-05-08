@@ -5,6 +5,10 @@ import { ComputeActions } from '../actions';
 import { history } from '../utils/history';
 
 class Home extends React.PureComponent {
+  componentDidMount() {
+    this.props.computePayslipReset();
+  }
+
   componentDidUpdate() {
     if (this.props.computePayslipRequestStatus === 'success') {
       history.push('/results');

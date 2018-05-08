@@ -20,7 +20,9 @@ const computeReducer = (state = initialState, action) => {
       );
       return state;
     }
-
+    case ComputeActions.COMPUTE_PAYSLIP_RESET: {
+      return ip.setIn(state, ['computePayslipRequestStatus'], null);
+    }
     default:
       return state;
   }
